@@ -7,6 +7,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const serviceAccount = require('./serviceAccountKey.json');
 const authRoutes = require('./routes/authRoutes');
+const instructorRoutes = require('./routes/instructorRoutes');
 
 
 admin.initializeApp({
@@ -23,6 +24,8 @@ app.get('/', (req, res) => {
   res.send('Backend đã chạy thành công!');
 });
 app.use('/api/auth', authRoutes);
+app.use('/api/instructor', instructorRoutes);
+
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {

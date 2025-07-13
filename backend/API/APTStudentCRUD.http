@@ -1,0 +1,40 @@
+POST http://localhost:3000/api/instructor/addStudent
+Content-Type: application/json
+
+{
+  "name": "Nguyen Van c",
+  "phone": "+84987634331",
+  "email": "vanc@example.com"
+}
+###
+# Giao bài học cho student
+POST http://localhost:3000/api/instructor/assignLesson
+Content-Type: application/json
+
+{
+  "studentPhone": "+84987634331",
+  "title": "Math Lesson 2",
+  "description": "Giải toán cơ bản"
+}
+
+###
+# Lấy danh sách tất cả student
+GET http://localhost:3000/api/instructor/students
+
+###
+# Lấy chi tiết 1 student (và các bài học)
+GET http://localhost:3000/api/instructor/student/+84987654321
+
+###
+# Sửa thông tin student
+PUT http://localhost:3000/api/instructor/editStudent/+84987634331
+Content-Type: application/json
+
+{
+  "name": "Nguyen Van A",
+  "email": "vanA@example.com"
+}
+
+###
+# Xoá student
+DELETE http://localhost:3000/api/instructor/student/+84987654321
