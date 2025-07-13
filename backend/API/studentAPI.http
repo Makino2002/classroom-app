@@ -1,0 +1,43 @@
+# Đăng nhập bằng email (loginEmail)
+POST http://localhost:3000/api/student/loginEmail
+Content-Type: application/json
+
+{
+  "email": "tailieuhoctapcuaman@gmail.com"
+}
+
+
+###
+# Xác thực mã (validateAccessCode)
+POST http://localhost:3000/api/student/validateAccessCode
+Content-Type: application/json
+
+{
+  "email": "tailieuhoctapcuaman@gmail.com",
+  "accessCode": "590719"
+}
+
+###
+# Lấy các bài học (myLessons)
+GET http://localhost:3000/api/student/myLessons?phone=+84584876785
+
+###
+# Đánh dấu hoàn thành bài học (markLessonDone)
+POST http://localhost:3000/api/student/markLessonDone
+Content-Type: application/json
+
+{
+  "phone": "+84987654321",
+  "lessonId": "cMs1yuCbeK9rovofWWeU"
+}
+
+###
+# Sửa thông tin profile (editProfile)
+PUT http://localhost:3000/api/student/editProfile
+Content-Type: application/json
+
+{
+  "phone": "+84987634331",
+  "name": "Mẫn",
+  "email": "student1@example.com"
+}

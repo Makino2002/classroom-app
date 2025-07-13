@@ -8,6 +8,7 @@ const { Server } = require('socket.io');
 const serviceAccount = require('./serviceAccountKey.json');
 const authRoutes = require('./routes/authRoutes');
 const instructorRoutes = require('./routes/instructorRoutes');
+const studentRoutes = require('./routes/studentRoutes');
 
 
 admin.initializeApp({
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 });
 app.use('/api/auth', authRoutes);
 app.use('/api/instructor', instructorRoutes);
+app.use('/api/student', studentRoutes);
 
 
 const PORT = process.env.PORT || 3000;
