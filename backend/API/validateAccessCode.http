@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/auth/validateAccessCode
+Content-Type: application/json
+
+{
+  "phoneNumber": "+84584876785",
+  "accessCode": "254880"
+}

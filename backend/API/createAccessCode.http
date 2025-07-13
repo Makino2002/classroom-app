@@ -1,0 +1,8 @@
+# Tạo mã xác thực (Access Code)
+POST http://localhost:3000/api/auth/createAccessCode
+Content-Type: application/json
+
+{
+  "phoneNumber": "+84584876785"
+}
+
