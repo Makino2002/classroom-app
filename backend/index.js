@@ -1,4 +1,4 @@
-// backend/index.js (phía trên cùng)
+require('dotenv').config();
 const admin = require('firebase-admin');
 const serviceAccount = require('./serviceAccountKey.json');
 
